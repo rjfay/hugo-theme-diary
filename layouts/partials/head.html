@@ -30,9 +30,9 @@
 {{ if .Site.GoogleAnalytics }}
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
+<link rel="preload" href="{{"/vendor/css/bootstrap.min.css" | relURL}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-<link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
-<script src="{{"/vendor/js/vue.min.js" | relURL}}" ></script>
+<script defer src="{{"/vendor/js/vue.min.js" | relURL}}"></script>
 
 {{if .Site.Params.manifest}}
 <link rel="manifest" href="{{.Site.Params.manifest}}">
