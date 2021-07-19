@@ -31,7 +31,6 @@
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
 <link rel="preload" href="{{"/vendor/css/bootstrap.min.css" | relURL}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
 <script defer src="{{"/vendor/js/vue.min.js" | relURL}}"></script>
 
 {{if .Site.Params.manifest}}
