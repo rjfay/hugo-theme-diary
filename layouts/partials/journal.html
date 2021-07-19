@@ -227,11 +227,9 @@ app = new Vue({
         // From https://www.jdeal.cn/archives/Dark.html
         var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
         if (night==""){
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                {{ if .Site.Params.enableAutoDarkMode }}
+            {{ if .Site.Params.enableAutoDarkMode }}
                 this.toggleDarkMode();
-                {{ end }}
-            }
+            {{ end }}
         }else{
             // If night is not empty
             if (night=="1") {
