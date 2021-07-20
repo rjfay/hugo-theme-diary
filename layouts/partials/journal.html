@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             navOpacity: 0,
             isDrawerOpen: false,
             mounted: false,
-            isDarkMode: false
+            isDarkMode: true
         },
         methods: {
                 sgn(t, x) {
@@ -226,16 +226,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
             };
             // From https://www.jdeal.cn/archives/Dark.html
             var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-            if (night==""){
+            /*if (night==""){
                 {{ if .Site.Params.enableAutoDarkMode }}
-                    this.toggleDarkMode();
+                    //this.toggleDarkMode(); dark by default
                 {{ end }}
-            }else{
+            }else{*/
                 // If night is not empty
-                if (night=="1") {
-                    this.toggleDarkMode();
-                }
+            if (this.isDarkMode && night=="0") {
+                this.toggleDarkMode(); // turn dark mode off
             }
+            //}
         },
         mounted() {
             this.handleScroll();
