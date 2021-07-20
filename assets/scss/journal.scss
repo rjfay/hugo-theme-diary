@@ -315,7 +315,7 @@ a {
   display: none !important;
   @media screen and (max-width: $single-column-max-width) {
     display: block !important;
-    padding: 50px 20px 80px 20px;
+    padding: 40px 20px;
     transition: padding 0.5s ease-in-out, margin 0.5s ease-in-out;
     text-align: center;
     * {
@@ -1086,4 +1086,8 @@ mjx-container
 
 .vcontent p {
   color: black !important;
+}
+
+.container-narrow {
+  height:40px;
 }
